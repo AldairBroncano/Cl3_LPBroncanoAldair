@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registrar Producto</title>
+</head>
+<body>
+<h1 align="center">Registrar Producto</h1>
+<form th:action="@{/Vistas/GuardarProducto}" method="post" th:object="${regproducto}">
+    <table align="center">
+        <input type="hidden" th:field="*{idProducto}">
+        <tr><td>Nombre</td><td><input type="text" th:field="*{nombre}"></td></tr>
+        <tr><td>Precio</td><td><input type="text" th:field="*{precio}"></td></tr>
+        <tr><td>Stock</td><td><input type="text" th:field="*{stock}"></td></tr>
+		<tr><td>PrecioComp</td><td><input type="text" th:field="*{precicomp}"></td></tr>
+		<tr><td>Estado</td><td><input type="text" th:field="*{estado}"></td></tr>
+		<tr><td>Descripción</td><td><input type="text" th:field="*{descripcion}"></td></tr>
+        <tr><td colspan="2" align="center">
+            <input type="submit" value="registrar"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
